@@ -8,3 +8,6 @@ env.Program(os.path.join(BIN_DIR, 'demo_button'), ["button.cpp"]);
 env.Program(os.path.join(BIN_DIR, 'demo_ui'), ["demoui.cpp"]);
 env.Program(os.path.join(BIN_DIR, 'demo_basic'), ["basic.cpp"]);
 env.Program(os.path.join(BIN_DIR, 'demo_basic1'), ["basic1.cpp"]);
+
+sources = Glob('mvvm/*.cpp')
+env.Program(os.path.join(BIN_DIR, 'mvvm_demo'), sources,  LIBS = env['LIBS']);

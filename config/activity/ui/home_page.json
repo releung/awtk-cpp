@@ -1,0 +1,18 @@
+{
+    "appName" : "JsonTest",
+    "network" : {
+        "device" : "eth0",
+        "ip" : "192.168.1.1"
+    },
+    "serial" : {
+        "device" : "COM1",
+        "baudrate" : "115200"
+    },
+    "activity" : {
+        "style" : {
+            "bg_img" : "bg_001"
+        }
+    },
+    "system_bar_dark" : "system_bar_dark",
+    "system_mute" : "1"
+}

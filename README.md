@@ -16,17 +16,33 @@ cd awtk; scons; cd -
 ```
 git clone https://github.com/zlgopen/awtk-cpp.git
 cd awtk-cpp
+
+# 使用默认配置
 scons
+
+# 或者指定 AWTK_ROOT MVVM_ROOT 路径
+# 需要提前编译好 awtk-mvvm 库
+scons AWTK_ROOT="E:/AWStudio/AWTK/SDK/awtk_git" MVVM_ROOT="E:/leung/wp/QTProjects/AllAboutQtAndCPlusPlus/projects/awtk/awtk-mvvm" -j4
 ```
 
 * 生成资源
 
 ```
+# 使用默认配置
 python ./scripts/update_res.py all
+
+# 或者指定 AWTK_ROOT 路径
+python .\scripts\update_res.py all --awtk_root=E:\AWStudio\AWTK\SDK\awtk_git
 ```
 
 > 或者通过 designer 生成资源
 
+> designer 可能需要修改 project.json 配置路径
+
+```json
+  "awtkRoot": "${AWTK_SDK_PATH}/awtk_git",
+  "awtkMvvmRoot": "E:/leung/wp/QTProjects/AllAboutQtAndCPlusPlus/projects/awtk/awtk-mvvm"
+```
 
 * 编译PC版本
 

@@ -1,0 +1,25 @@
+<window name="my_homepage" 
+v-model="json(url=${app_dir}/config/activity/ui/home_page.json)"
+v-data:style:normal:bg_image="{activity.style.bg_img}">
+  <view x="c" y="m" w="300" h="160" children_layout="default(c=2,r=4,s=10,m=10)">
+    <label text="net device" />
+    <edit  v-data:value="{network.device}"/>
+
+    <label text="net ip" />
+    <edit  v-data:value="{network.ip}"/>
+
+    <label text="serial device" />
+    <edit  v-data:value="{serial.device}"/>
+
+    <label text="serial baudrate" />
+    <edit  v-data:value="{serial.baudrate}"/>
+  </view>
+
+  <view x="c" y="b:20" w="100%" h="60" children_layout="default(c=3,r=1,s=10,m=10)">
+    <button text="Save" v-on:click="{save}"/>
+    <label v-data:text="{appName}"/>
+    <!-- <button text="Back" v-on:click="{nothing, CloseWindow=true}"/> -->
+    <button text="Quit" v-on:click="{nothing,  QuitApp=true}"/>
+  </view>
+
+</window>

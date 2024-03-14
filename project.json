@@ -40,5 +40,7 @@
   "creator": {
     "name": "AWTK Designer",
     "version": "0.1.5"
-  }
+  },
+  "awtkRoot": "${AWTK_SDK_PATH}/awtk_git",
+  "awtkMvvmRoot": "E:/leung/wp/QTProjects/AllAboutQtAndCPlusPlus/projects/awtk/awtk-mvvm"
 }
